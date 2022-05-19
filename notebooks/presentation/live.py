@@ -190,6 +190,10 @@ Medals = pd.read_csv(data + "Medals.csv")
 # hist_med = pd.read_csv("Documents\mira-bing\data\Summer_medals_History.csv")
 hist_med = pd.read_csv(data + "Summer_medals_History.csv")
 
+# ## 📚 References 📚
+#
+# - [Summer Olympics Medalist | Kaggle](https://www.kaggle.com/datasets/brendan45774/summer-olympics-medalist-dataset?select=Summer_Olympic_medallists_1896-2008.xlsx)
+
 Medals.head()
 
 hist_med.head()
@@ -223,10 +227,14 @@ predictions
 
 # #### so we can do it, but is it accurate?
 
+# ## 📝 Pro tip from Erin
+#
+# - train_test_split(... random_state = #) to reproduce testing data
+
 from sklearn.metrics import accuracy_score
 X = hist_med.drop(columns =['Country'])
 y = hist_med['Country']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state=1924)
 
 # #### Checking the accuracy at 75,25
 
