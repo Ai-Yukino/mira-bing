@@ -41,6 +41,7 @@ Role: Data engineer/IT/DevOps
 
 ## ❄ Dayana ❄
 Role: Data Analyst
+
 -Reviewed statistical data for the dataframes using the function describe()
 
 -Looked for possibilities to clean data 
